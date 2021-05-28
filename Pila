@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author ivani
+ */
+public class Pila {
+    Scanner teclado=new Scanner(System.in);
+    int pilaN[]=new int[5];
+    
+    int limite=-1;
+            
+    public void push()
+    {
+        if(limite>=pilaN.length-1)
+        {
+            System.out.println("La pila esta llena");
+        }else{
+            limite+=1;
+            
+            System.out.println("Ingrese el dato: ");
+            pilaN[limite]=teclado.nextInt();
+        }
+    }
+    
+    public int pop()
+    {
+        if(limite==-1)
+        { System.out.println("La pila esta vacia");
+    }else{
+        System.out.println("Se haeliminado un elemento de la pila");
+        pilaN[limite]=0;
+    }
+    return limite--;
+    }
+    
+    public void mostrarPila()
+    {
+        for(int limite=4;limite>0;limite--)
+        {
+            System.out.println("Datos de la pila"+pilaN[limite]);
+        }
+    }
+}
