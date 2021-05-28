@@ -1,0 +1,52 @@
+
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author ivani
+ */
+public class ClasePrincipal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Pila Object=new Pila();
+        Scanner op1=new Scanner(System.in);
+        int opcionM;
+        do
+        {
+            System.out.println("Menu de la pila");
+            System.out.println("1. Ingresar elementos (Push): ");
+            System.out.println("2.Eliminar elementos (pop)");
+            System.out.println("3. Mostrar la pila completa: ");
+            System.out.println("4. salir: ");
+            System.out.println("Ingresa una opcion");
+            opcionM = op1.nextInt();
+            switch(opcionM)
+            {
+                case 1:
+                    Object.push();
+                    break;
+                case 2:
+                    Object.pop();
+                    break;
+                case 3:
+                    Object.mostrarPila();
+                    break;
+                case 4:
+                    break;
+                default: 
+                    System.out.println("\nIngrese una opcion valida");
+            }
+        }while(opcionM!=4);
+    }
+    
+}
